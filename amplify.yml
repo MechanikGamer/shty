@@ -7,7 +7,7 @@ applications:
             - yarn install --frozen-lockfile
         build:
           commands:
-            - yarn workspace ui build
+            - yarn workspace @repo/ui build
             - yarn workspace web build
       artifacts:
         baseDirectory: .next
