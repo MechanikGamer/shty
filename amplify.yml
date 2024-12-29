@@ -15,10 +15,9 @@ applications:
           - "**/*"
       cache:
         paths:
-          - .next/cache/**/*
+          - apps/web/.next/cache/**/*
           - node_modules/**/*
           - packages/*/node_modules/**/*
-          - apps/*/node_modules/**/*
       buildSpec:
         nodejs:
           version: 22
