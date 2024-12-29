@@ -11,5 +11,11 @@ export default defineConfig((options: Options) => ({
   format: ["cjs", "esm"],
   external: ["react"],
   dts: true,
+  minify: true, 
+  esbuildOptions(options) {
+    options.minifySyntax = true; 
+    options.minifyWhitespace = true;
+    options.minifyIdentifiers = true; 
+  },
   ...options,
 }));
