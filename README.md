@@ -73,6 +73,21 @@ Follow these steps to set up and run the project locally:
 
 ### Development
 
+1. Locate the `.env.example` file in the root directory.
+2. Create a copy of the `.env.example` file and rename it to `.env`:
+
+```bash
+ cp .env.example .env
+```
+
+3. Open the .env file in your preferred text editor and update the placeholder values with your actual configuration values. For example:
+
+```bash
+MONGODB_URI=mongodb+srv://DATABASE_USER:DATABASE_PASSWORD@DATABASE_URL/DATABASE_NAME
+PORT=PORT_NUMBER
+NODE_ENV=development / production
+```
+
 To start the development environment for web:
 
 ```bash
