@@ -10,17 +10,16 @@ applications:
             - yarn workspace ui build
             - yarn workspace web build
       artifacts:
-        baseDirectory: apps/web/.next
+        baseDirectory: .next
         files:
           - "**/*"
       cache:
         paths:
-          - apps/web/.next/cache/**/*
+          - .next/cache/**/*
           - node_modules/**/*
           - packages/*/node_modules/**/*
           - apps/*/node_modules/**/*
       buildSpec:
         nodejs:
           version: 22
-      buildPath: .
-    appRoot: .
+    appRoot: apps/web
