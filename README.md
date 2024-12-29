@@ -18,7 +18,6 @@
 
 - **Frameworks**: [React Native](https://reactnative.dev/), [Next.js](https://nextjs.org/)
 - **Backend**: [TRPC](https://trpc.io/), [MongoDB](https://www.mongodb.com/)
-- **Build System**: [Turbopack](https://turbo.build/pack) (via Turborepo)
 - **Mobile App**: [Expo](https://expo.dev/)
 - **Package Manager**: [Yarn](https://yarnpkg.com/)
 - **Linting & Formatting**: [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
