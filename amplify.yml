@@ -4,18 +4,23 @@ applications:
       phases:
         preBuild:
           commands:
-            - npx yarn install
+            - yarn install --frozen-lockfile
         build:
           commands:
-            - npx yarn workspace @repo/ui build
-            - npx yarn workspace web build
+            - yarn workspace ui build
+            - yarn workspace web build
       artifacts:
         baseDirectory: apps/web/.next
         files:
           - "**/*"
       cache:
         paths:
-          - .next/cache/**/*
+          - apps/web/.next/cache/**/*
           - node_modules/**/*
-      buildPath: /
+          - packages/*/node_modules/**/*
+          - apps/*/node_modules/**/*
+      buildSpec:
+        nodejs:
+          version: 22
+      buildPath: .
     appRoot: .
