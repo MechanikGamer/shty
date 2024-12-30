@@ -1,11 +1,14 @@
+const path = require("path");
 module.exports = {
   reactStrictMode: true,
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
-      // Transform all direct `react-native` imports to `react-native-web`
       "react-native$": "react-native-web",
+      "@components": path.resolve(__dirname, "app/components"),
+      "@lib": path.resolve(__dirname, "lib"),
     };
+
     config.resolve.extensions = [
       ".web.js",
       ".web.jsx",
@@ -13,6 +16,7 @@ module.exports = {
       ".web.tsx",
       ...config.resolve.extensions,
     ];
+
     return config;
   },
 };
