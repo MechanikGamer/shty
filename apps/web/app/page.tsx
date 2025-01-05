@@ -15,7 +15,7 @@ export default function Web() {
       >
         {t("headline")}
       </h1>
-      <h2 className="w-full mt-8 text-[#c9ced6] text-base font-light font-['Inter'] leading-normal">
+      <h2 className="w-full mt-8 text-[#c9ced6] text-xl font-light font-['Inter'] leading-normal">
         {t("subheadline")}
       </h2>
       <div className="mt-8 px-0 w-full md:w-[600px] lg:w-[700px]">
