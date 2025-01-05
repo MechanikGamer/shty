@@ -30,7 +30,7 @@ const RegisterButton = () => {
           borderColor: colors.buttonBorder,
           borderWidth: 1,
         }}
-        className="flex items-center justify-center rounded-full px-8 py-3 lg:px-12 lg:py-4 border border-solid text-white text-[18px] font-semibold font-['Inter'] leading-[18px] transition-transform duration-300 transform hover:scale-105 hover:bg-[#1A73E8]"
+        className="flex items-center justify-center rounded-full px-2 sm:px-8 py-3 lg:px-12 lg:py-4 border border-solid text-white text-[18px] font-semibold font-['Inter'] leading-[18px] transition-transform duration-300 transform hover:scale-105 hover:bg-[#1A73E8]"
       >
         {t("createAccount")}
       </button>

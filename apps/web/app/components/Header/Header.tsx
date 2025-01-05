@@ -17,11 +17,7 @@ export const Header = () => {
       </div>
       <div className="flex items-center gap-5">
         {pathname !== "/login" && <LoginButton />}
-        {pathname !== "/register" && (
-          <div className="hidden sm:block">
-            <RegisterButton />
-          </div>
-        )}
+        {pathname !== "/register" && <RegisterButton />}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 {
     "homepage": {
-        "PageTitle": "Shty.Me | Upraszczaj linki, zarządzaj nimi, twórz kody QR",
+        "PageTitle": "Shty.Me | Skracaj linki, zarządzaj nimi, twórz kody QR",
         "Description": "Shty.Me to potężne i łatwe w obsłudze narzędzie do skracania linków, oferujące zaawansowane zarządzanie linkami oraz generowanie kodów QR. Upraszczaj linki i ulepsz swoją obecność w sieci z łatwością.",
         "headline": "Skróć swoje Długie Linki :)",
         "subheadline": "Shty.Me to wydajna i łatwa w użyciu usługa skracania URL, która usprawnia Twoje doświadczenia online.",
@@ -33,6 +33,26 @@
             "missingSpecialChar": "Hasło musi zawierać co najmniej jeden znak specjalny.",
             "missingUppercase": "Hasło musi zawierać co najmniej jedną wielką literę.",
             "passwordMismatch": "Hasła nie pasują do siebie."
+        }
+    },
+    "loginpage": {
+        "title": "Zaloguj się i zacznij udostępniać",
+        "noAccount": "Nie masz jeszcze konta?",
+        "signup": "Zarejestruj się",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Wpisz swój email",
+        "passwordLabel": "Hasło",
+        "passwordPlaceholder": "Wpisz swoje hasło",
+        "login": "Zaloguj się",
+        "forgotPassword": "Zapomniałeś hasła?",
+        "agreementText": "Logując się na konto, zgadzasz się na",
+        "termsOfService": "Warunki korzystania z usługi",
+        "privacyPolicy": "Politykę prywatności",
+        "acceptableUsePolicy": "Politykę dopuszczalnego użytkowania",
+        "and": "oraz",
+        "errors": {
+            "invalidEmail": "Proszę wprowadzić poprawny adres email.",
+            "requiredField": "To pole jest wymagane."
         }
     }
 }
