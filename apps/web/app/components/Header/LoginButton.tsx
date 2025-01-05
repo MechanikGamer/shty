@@ -2,8 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import colors from "../../lib/colors";
+import { useTranslations } from "next-intl";
 
 const LoginButton = () => {
+  const t = useTranslations("homepage");
+
   const handleLoginClick = () => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "login_button_click", {
@@ -15,19 +18,21 @@ const LoginButton = () => {
   };
 
   return (
-    <Link href="/login">
+    <Link
+      href="/login"
+      className="hover:bg-[#368F9A] rounded-full"
+      aria-label={t("login")}
+    >
       <button
         onClick={handleLoginClick}
         style={{
-          background: colors.primaryButtonBackground,
           borderColor: colors.buttonBorder,
           borderWidth: 1,
         }}
-        className="flex items-center justify-center rounded-full px-8 py-3 lg:px-12 lg:py-4 border border-solid"
+        className="flex items-center justify-center rounded-full px-8 py-3 lg:px-12 lg:py-4 border border-solid text-white text-[18px] font-semibold font-['Inter'] leading-[18px] transition-transform duration-300 transform hover:scale-105 hover:bg-[#368F9A]"
+        aria-label={t("login")}
       >
-        <div className="text-white text-[18px] font-semibold font-['Inter'] leading-[18px]">
-          Login
-        </div>
+        {t("login")}
       </button>
     </Link>
   );

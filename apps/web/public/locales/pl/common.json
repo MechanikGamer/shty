@@ -6,6 +6,33 @@
         "subheadline": "Shty.Me to wydajna i łatwa w użyciu usługa skracania URL, która usprawnia Twoje doświadczenia online.",
         "enterTheLink": "Wprowadź link",
         "shortLink": "Skróć link",
-        "qrCode": "Kod QR"
+        "qrCode": "Kod QR",
+        "createAccount": "Utwórz konto",
+        "login": "Zaloguj się"
+    },
+    "registerpage": {
+        "title": "Utwórz konto",
+        "alreadyHaveAccount": "Masz już konto?",
+        "login": "Zaloguj się",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Wprowadź swój email",
+        "passwordLabel": "Hasło",
+        "passwordPlaceholder": "Wprowadź swoje hasło",
+        "confirmPasswordLabel": "Potwierdź hasło",
+        "confirmPasswordPlaceholder": "Potwierdź swoje hasło",
+        "register": "Utwórz darmowe konto",
+        "agreementText": "Tworząc konto, zgadzasz się na",
+        "termsOfService": "Warunki korzystania z usługi",
+        "privacyPolicy": "Politykę prywatności",
+        "acceptableUsePolicy": "Politykę dopuszczalnego użytkowania",
+        "and": "oraz",
+        "errors": {
+            "invalidEmail": "Proszę wprowadzić poprawny adres email.",
+            "requiredField": "To pole jest wymagane.",
+            "shortPassword": "Hasło musi mieć co najmniej 6 znaków.",
+            "missingSpecialChar": "Hasło musi zawierać co najmniej jeden znak specjalny.",
+            "missingUppercase": "Hasło musi zawierać co najmniej jedną wielką literę.",
+            "passwordMismatch": "Hasła nie pasują do siebie."
+        }
     }
 }
