@@ -3,6 +3,9 @@
         "PageTitle": "Shty.Me | Upraszczaj linki, zarządzaj nimi, twórz kody QR",
         "Description": "Shty.Me to potężne i łatwe w obsłudze narzędzie do skracania linków, oferujące zaawansowane zarządzanie linkami oraz generowanie kodów QR. Upraszczaj linki i ulepsz swoją obecność w sieci z łatwością.",
         "headline": "Skróć swoje Długie Linki :)",
-        "subheadline": "Shty.Me to wydajna i łatwa w użyciu usługa skracania URL, która usprawnia Twoje doświadczenia online."
+        "subheadline": "Shty.Me to wydajna i łatwa w użyciu usługa skracania URL, która usprawnia Twoje doświadczenia online.",
+        "enterTheLink": "Wprowadź link",
+        "shortLink": "Skróć link",
+        "qrCode": "Kod QR"
     }
 }
