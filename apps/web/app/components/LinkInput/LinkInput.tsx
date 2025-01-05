@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 const LinkInput = () => {
   const t = useTranslations("homepage");
   const [link, setLink] = useState("");
-  const [selectedOption, setSelectedOption] = useState("shortLink"); // Default option is "shortLink"
+  const [selectedOption, setSelectedOption] = useState("shortLink");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLink(event.target.value);
@@ -24,7 +24,6 @@ const LinkInput = () => {
 
   return (
     <div className="flex flex-col gap-4 items-center w-full">
-      {/* Switcher for Shortlink and QR Code */}
       <div className="flex justify-center gap-4 my-8">
         <button
           onClick={() => handleOptionChange("shortLink")}
