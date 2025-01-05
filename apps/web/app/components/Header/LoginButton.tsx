@@ -1,9 +1,22 @@
+"use client";
 import React from "react";
 import colors from "../../lib/colors";
 
 const LoginButton = () => {
+  const handleLoginClick = () => {
+    console.log("Login button clicked");
+
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "login_button_click", {
+        event_category: "engagement",
+        event_label: "Login Button",
+        value: 1,
+      });
+    }
+  };
   return (
-    <div
+    <button
+      onClick={handleLoginClick}
       style={{
         background: colors.primaryButtonBackground,
         borderColor: colors.buttonBorder,
@@ -14,7 +27,7 @@ const LoginButton = () => {
       <div className="text-white text-[18px] font-semibold font-['Inter'] leading-[18px]">
         Login
       </div>
-    </div>
+    </button>
   );
 };
 
