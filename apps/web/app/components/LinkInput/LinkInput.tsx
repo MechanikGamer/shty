@@ -49,10 +49,8 @@ const LinkInput = () => {
         </button>
       </div>
 
-      {/* Input Field */}
       <div className="h-[60px] pl-[15px] pr-[4px] py-[21px] bg-[#181e29] rounded-[48px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.10)] border-4 border-[#144ee3]/10 flex items-center justify-between w-full max-w-md">
         <div className="flex items-center gap-5 w-full">
-          {/* Icon with fixed size */}
           <div className="flex items-center justify-center w-6 h-6 text-[#c9ced6] text-xl">
             <FontAwesomeIcon icon={faLink} />
           </div>

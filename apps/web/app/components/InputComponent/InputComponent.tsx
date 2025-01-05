@@ -8,7 +8,7 @@ interface InputComponentProps {
   value: string;
   placeholder: string;
   onChange: (value: string) => void;
-  onBlur?: () => void; // Added onBlur for validation
+  onBlur?: () => void;
   icon?: IconDefinition;
   error?: string;
   isError?: boolean;
@@ -27,13 +27,11 @@ const InputComponent: React.FC<InputComponentProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-1 w-full font-['Inter']">
-      {/* Label */}
       {label && (
         <label className="text-lg lg:text-xl font-semibold font-['Inter'] text-[#c9ced6] mb-2 md:mt-6">
           {label}
         </label>
       )}
-      {/* Input Field */}
       <div
         className={`h-[60px] px-[15px] py-[10px] rounded-[48px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.10)] flex items-center w-full ${
           isError
@@ -51,11 +49,10 @@ const InputComponent: React.FC<InputComponentProps> = ({
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          onBlur={onBlur} // Added onBlur for validation
+          onBlur={onBlur}
           className="text-[#c9ced6] text-base font-light font-['Inter'] leading-7 bg-transparent border-none outline-none placeholder-[#c9ced6] w-full ml-3"
         />
       </div>
-      {/* Error Message */}
       {isError && error && (
         <span className="text-red-500 text-sm md:text-base lg:text-lg mt-1">
           {error}
