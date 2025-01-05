@@ -1,5 +1,10 @@
 const path = require("path");
-module.exports = {
+const createNextIntlPlugin = require("next-intl/plugin");
+
+const withNextIntl = createNextIntlPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   webpack: (config) => {
     config.resolve.alias = {
@@ -20,3 +25,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withNextIntl(nextConfig);
