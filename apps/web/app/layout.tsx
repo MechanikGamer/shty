@@ -61,7 +61,12 @@ export default async function RootLayout({
             content="https://www.shty.me/twitter-image.jpg"
           /> */}
 
-          <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+          <link
+            rel="icon"
+            type="image/avif"
+            href="/favicon.avif"
+            sizes="32x32"
+          />
         </head>
         <body className="bg-[#0B101B] relative min-h-screen">
           <div
