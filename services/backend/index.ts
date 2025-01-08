@@ -1,45 +1,35 @@
-import { inferAsyncReturnType, initTRPC } from '@trpc/server'
-import * as trpcExpress from '@trpc/server/adapters/express'
-import dotenv from 'dotenv'
-import express from 'express'
-import { appRouter } from './server'
-import { getDbConnection } from './src/config/db'
+import dotenv from 'dotenv';
+import express from 'express';
+import * as trpcExpress from '@trpc/server/adapters/express';
+import { appRouter } from './server';
+import { connectToDB } from './src/config/db';
 
-dotenv.config()
+dotenv.config();
 
-const PORT = process.env.PORT
-const ENV = process.env.NODE_ENV
+const PORT = process.env.PORT || 3000;
+const ENV = process.env.NODE_ENV || 'development';
 
-if (PORT === undefined) {
-  throw new Error('PORT is not defined')
-}
+const app = express();
 
-if (ENV === undefined) {
-  throw new Error('NODE_ENV is not defined')
-}
-
-const createContext = ({ req, res }: trpcExpress.CreateExpressContextOptions) => ({})
-type Context = inferAsyncReturnType<typeof createContext>
-
-const t = initTRPC.context<Context>().create()
-const app = express()
-
-app.use(
-  '/trpc',
-  trpcExpress.createExpressMiddleware({
+app.use('/trpc', (req, res, next) => {
+  const middleware = trpcExpress.createExpressMiddleware({
     router: appRouter,
-    createContext,
-    onError: console.log,
-  }),
-)
+    createContext: () => ({}),
+  });
+
+  return (middleware as unknown as express.RequestHandler)(req, res, next);
+});
 
 app.listen(PORT, async () => {
-  await getDbConnection()
-  if (ENV === 'development') {
-    console.log(`Server is running on http://localhost:${PORT}`)
-  } else {
-    console.log(`Server is running on port ${PORT}`)
-  }
-})
+  try {
+    connectToDB();
 
-export type { AppRouter } from './server'
+    console.log(
+      `Server is running on ${
+        ENV === 'development' ? `http://localhost:${PORT}` : `port ${PORT}`
+      }`,
+    );
+  } catch (error) {
+    console.error('Failed to connect to the database:', error);
+  }
+});

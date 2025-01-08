@@ -1,30 +1,47 @@
-import mongoose, { Document, Schema } from 'mongoose'
+import dynamoose from 'dynamoose';
+import { v4 as uuidv4 } from 'uuid'; 
 
-interface User extends Document {
-  name: string
-  surname: string
-  email: string
-  passwordHash: string
-  accountType: string
-  emailVerificationCode: number
-  emailVerified: boolean
-}
+dynamoose.Table.defaults.set({
+  throughput: "ON_DEMAND",
+});
 
-const userSchema = new Schema<User>(
+const UserSchema = new dynamoose.Schema(
   {
-    name: { type: String, required: true },
-    surname: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    passwordHash: { type: String, required: true },
-    accountType: { type: String, required: true },
-    emailVerified: { type: Boolean, default: false },
-    emailVerificationCode: { type: Number },
+    PK: {
+      type: String,
+      hashKey: true,
+      default: () => uuidv4(),
+    },
+    SK: {
+      type: String,
+      rangeKey: true,
+      required: true,
+    },
+    accountType: {
+      type: String,
+      required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+      },
+    password: {
+      type: String,
+      required: true,
+    },
+    emailVerificationCode: {
+      type: Number,
+      required: false,
+    },
+    emailVerified: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
   {
-    timestamps: true,
+    timestamps: true, 
   },
-)
+);
 
-export type { User }
-const UserModel = mongoose.model<User>('User', userSchema)
-export { UserModel }
+export const UserModel = dynamoose.model('shtyMe_Users', UserSchema,{create: false});
