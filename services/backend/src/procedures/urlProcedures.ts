@@ -6,7 +6,10 @@ import { createShortUrl, getOriginalUrl } from '../models/urlModel';
 const t = initTRPC.create();
 
 const urlSchema = z.object({
-  originalUrl: z.string().url({ message: 'Invalid URL format' }),
+  originalUrl: z.string()
+  .min(1)
+  .max(2048)
+  .url({ message: 'Invalid URL format' }),
   userId: z.string(),
   expirationDate: z
     .string()
@@ -40,10 +43,13 @@ export const urlProcedures = t.router({
           strippedUrl: shortUrl.strippedUrl, 
         };
       } catch (error) {
-        console.error('Error creating short URL:', error);
+        console.error('Error creating short URL:', {
+          userId: input.userId,
+          error: error instanceof Error ? error.message : 'Unknown error',
+           });
         throw new TRPCError({
           code: 'INTERNAL_SERVER_ERROR',
-          message: 'Failed to create short URL',
+          message: 'Unable to process your request',
         });
       }
     }),
