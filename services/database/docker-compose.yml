@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   dynamodb_dev:
     image: amazon/dynamodb-local
