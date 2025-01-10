@@ -19,6 +19,7 @@ const PREFIX_MAPPINGS: Record<string, string> = {
   '2': 'http://',
   '3': 'https://',
   '4': 'https://www.',
+  '5': 'http://www.',
 };
 
 const SUFFIX_MAPPINGS: Record<string, string> = {
