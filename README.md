@@ -130,7 +130,7 @@ The project uses the following tools to maintain high code quality:
 
 - **Prettier**: Automatic code formatting. Run `yarn prettier` to format code.
 - **ESLint**: Static code analysis. Run `yarn lint` to check for linting errors.
-- **TypeScript**: Strict type checking. Run `yarn tsc` to check for type errors.
+- **TypeScript**: Strict type checking. Run `yarn tsc` to check for type errors. test
 
 ---
 
