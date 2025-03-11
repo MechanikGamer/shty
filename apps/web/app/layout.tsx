@@ -2,6 +2,7 @@ import React from "react";
 import { Header } from "./components/Header/Header";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/global.css";
 
 import { AbstractIntlMessages } from "next-intl";
@@ -135,6 +136,7 @@ export default async function RootLayout({
           </header>
           <main className="relative z-10 px-6 py-6 md:px-14 md:py-2 ">
             {children}
+            <Analytics />
           </main>
         </body>
       </html>
