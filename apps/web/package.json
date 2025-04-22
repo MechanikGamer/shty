@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@repo/ui": "*",
     "@vercel/analytics": "^1.5.0",
-    "next": "^15.2.2",
+    "next": "^15.2.4",
     "next-intl": "^3.26.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
