@@ -16,13 +16,13 @@
     "dotenv": "^16.4.7",
     "dynamodb-toolbox": "^0.3.3",
     "dynamoose": "^4.0.3",
-    "express": "^4.21.1",
+    "express": "^5.1.0",
     "tsx": "^4.19.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
-    "@types/express": "^5.0.0",
+    "@types/express": "^5.0.1",
     "@types/node": "^22.10.1",
     "eslint": "^9.17.0",
     "typescript": "^5.7.2",
